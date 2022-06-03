@@ -51,4 +51,4 @@ However using const prevents you from reassigning an existing variable to anothe
 
 Using const and let in declating variables means they are block scoped, meaning their values only exist in the block they are declared.
 
-A variable is referred to as global when it is declared outside a block. When a variable is declared within a block, it is called a local variable/ local scope
+A variable is referred to as global when it is declared outside a block. When a variable is declared within a block, it is called a local variable/ local scope.

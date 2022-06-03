@@ -52,3 +52,18 @@ However using const prevents you from reassigning an existing variable to anothe
 Using const and let in declating variables means they are block scoped, meaning their values only exist in the block they are declared.
 
 A variable is referred to as global when it is declared outside a block. When a variable is declared within a block, it is called a local variable/ local scope.
+
+### What is the difference between let and const?
+
+### Direct Assignment and Assignment by reference
+
+#### Direct Assignment
+
+When you assign a primitive value a variable, any changes you make are made directly to that value.
+
+    {
+        const a = 1;
+        const b = a; // a = 1, b = 1
+
+        b = 2; // a = 1, b = 2
+    }

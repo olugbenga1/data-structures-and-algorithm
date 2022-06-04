@@ -29,6 +29,8 @@ Non-Primitive data types include:
 
 Note that non-primitive data types are all `objects`.
 
+Primitive data types have properties and methods
+
 ## Variables and Variable Declaration
 
 Before ES6 `var` was used in declaring variables. With ES6 came `const` and `let`.
@@ -55,6 +57,14 @@ A variable is referred to as global when it is declared outside a block. When a 
 
 ### What is the difference between let and const?
 
+#### let
+
+The scope of a let variable is block scope. It can be updated but cannot be re-declared into the scope. It can be declared without initialization. It cannot be accessed without initialization, as it returns an error.
+
+#### const
+
+The scope of a const variable is block scope. It cannot be updated or re-declared into the scope. It cannot be declared without initialization. It cannot be accessed without initialization, as it cannot be declared without initialization.
+
 ### Direct Assignment and Assignment by reference
 
 #### Direct Assignment
@@ -66,4 +76,39 @@ When you assign a primitive value a variable, any changes you make are made dire
         const b = a; // a = 1, b = 1
 
         b = 2; // a = 1, b = 2
+    }
+
+#### Assignment by Reference
+
+const c = { value: 1 };
+let d = c; // c.value = 1, d.value = 1
+d.value = 2; // c.value = 2, d.value = 2
+
+### Methods, Properties, Parameters, Arguments
+
+`Properties` are information about the object or value, while
+
+`Methods` perform an action on the object or value - either to change it or tell us something about it.
+
+`Parameters` are the names of variables present in function definition.
+
+`Arguments` are the real values that are passed to the function and received by them
+
+Technically only objects have methods and properties but javascript overcomes this with primitive data types by creating a wrapper object around it. This all happens in the background, so for all intent and purposes, it looks like primitive data types have methods and properties.
+
+All properties of primitive data types are immutable, meaning they are unable to be changed.
+
+We access properties of string using dot notation or square brackets.
+
+Since a method is an action that a primitive data type or object can perform, we use dot notation followed by parentheses to access methods. This is a good way to differentiate between methods and properties.
+
+    {
+        let name = "Alexa";
+        name.length; // 5 - property
+
+        name.toUpperCase(); // method
+
+        name.charAt(2); // method
+
+        Few other string methods are indexOf(), lastIndexOf(), concat(), trim(), repeat()
     }

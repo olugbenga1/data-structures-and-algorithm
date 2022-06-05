@@ -112,3 +112,28 @@ Since a method is an action that a primitive data type or object can perform, we
 
         Few other string methods are indexOf(), lastIndexOf(), concat(), trim(), repeat()
     }
+
+> ES6 added some string methods like includes(), startsWith(), endsWith() etc. You can find more on W3Schools and mdn docs.
+
+Numbers like strings also have methods in javascript
+
+#### Difference between points++ and ++points
+
+    {
+        let points = 5;
+
+        points++; // will return 6, then increase points to 7
+
+        ++points; // will increase points to 8, then return 8
+    }
+
+#### Template Literals
+
+A special type of string that was introduced in ES6. It uses the backtick character to delineate strings. They also allow interpolation in javascript code. This means a javascript code can be inside a string and the result will be displayed. It can be used in place of string concatenation too.
+
+    {
+        let a = "mario";
+        let b = "cart";
+
+        let c = `the answer is ${a} + ${b}` // this outputs string "the answer is mario cart"
+    }

@@ -113,19 +113,11 @@ Since a method is an action that a primitive data type or object can perform, we
         Few other string methods are indexOf(), lastIndexOf(), concat(), trim(), repeat()
     }
 
+You can convert strings to numbers and numbers back to strings by using the `Number()` method and the `String` or `toString()` methods respectively.
+
 > ES6 added some string methods like includes(), startsWith(), endsWith() etc. You can find more on W3Schools and mdn docs.
 
 Numbers like strings also have methods in javascript
-
-#### Difference between points++ and ++points
-
-    {
-        let points = 5;
-
-        points++; // will return 6, then increase points to 7
-
-        ++points; // will increase points to 8, then return 8
-    }
 
 #### Template Literals
 
@@ -137,3 +129,39 @@ A special type of string that was introduced in ES6. It uses the backtick charac
 
         let c = `the answer is ${a} + ${b}` // this outputs string "the answer is mario cart"
     }
+
+#### Arithmetic Operations
+
+Javascript can do arithmetic operations
+
+> Addition (+), Subtraction (-), Multiplication (\*), Division (/), Exponentiation, Modulus (%)
+
+#### Difference between points++ and ++points
+
+    {
+        let points = 5;
+
+        points++; // will return 6, then increase points to 7
+
+        ++points; // will increase points to 8, then return 8
+    }
+
+### Type Coercion
+
+Type coercion happens when the operands of an operator are of different types, Javascript then attempts to convert one operand to an equivalent value of the other operand's type. For example, if you try to multiply a string and a number, javascript will attempt to coerce the string to a number.
+
+    {
+        '2' * 8; // 16
+    }
+
+    This may seem useful but the process is not always logical and consistent and may cause confusion. For example, if you try to add a string and a number together, Javascript will convert the number to a string and concatenate the two strings together:
+
+        {
+            '2' + 8; // '28'
+        }
+
+    It is very important to be explicit with the types of values you are working with to avoid errors.
+
+    > Javascript is a weakly typed or loosely typed language. This means that you don't need to explicitly specify what data-type a variable is when you declare it. This can lead to unexpected bugs especially when type coercion takes place in the background.
+
+    > Typescript is an open source superset of javascript that is maintained by microsoft. It provides the option to specify types of variables when they are declared.

@@ -33,7 +33,7 @@ Primitive data types have properties and methods
 
 ## Variables and Variable Declaration
 
-Before ES6 `var` was used in declaring variables. With ES6 came `const` and `let`.
+Before ES6 `var` was used in declaring variables. var is function scope. With ES6 came `const` and `let`. const and let are block scope
 
 In ES6 `const` and `let` are used in declaring variables. If a data type is declared with `const`, its value cannot be changed but variables declared with let can be reassigned.
 
@@ -64,6 +64,8 @@ The scope of a let variable is block scope. It can be updated but cannot be re-d
 #### const
 
 The scope of a const variable is block scope. It cannot be updated or re-declared into the scope. It cannot be declared without initialization. It cannot be accessed without initialization, as it cannot be declared without initialization.
+
+> When you console.log in chrome dev tools console, if the result is black, it is a string, if the result is blue, it is a number. You can also check the type of your variable by using `typeof`
 
 ### Direct Assignment and Assignment by reference
 
@@ -119,6 +121,23 @@ You can convert strings to numbers and numbers back to strings by using the `Num
 
 Numbers like strings also have methods in javascript
 
+#### String Concatenation
+
+It is used to combine string values using quotation marks(""). Template literals also do similar operations using backticks.
+
+    {
+        const name = "Gbenga";
+        const lastName = "Odedele";
+
+        console.log("Hello there, my full name is " + name + " " + lastName);
+    }
+
+    {
+        const website = "google";
+        const url = "https://www." + website + ".com";
+        console.log(url);
+    }
+
 #### Template Literals
 
 A special type of string that was introduced in ES6. It uses the backtick character to delineate strings. They also allow interpolation in javascript code. This means a javascript code can be inside a string and the result will be displayed. It can be used in place of string concatenation too.
@@ -165,3 +184,29 @@ Type coercion happens when the operands of an operator are of different types, J
     > Javascript is a weakly typed or loosely typed language. This means that you don't need to explicitly specify what data-type a variable is when you declare it. This can lead to unexpected bugs especially when type coercion takes place in the background.
 
     > Typescript is an open source superset of javascript that is maintained by microsoft. It provides the option to specify types of variables when they are declared.
+
+### Implicit Type Conversion
+
+    {
+        const name = "john";
+        const lastName = "jordan";
+
+        const value = name - lastName;
+        console.log(value); // NaN
+    }
+
+    {
+        let number3 = "10";
+        let number4 = "23";
+
+        const result = number3 - number4;
+        console.log(result); // -13 :javascript does the implicit type conversion to be able to do the math operation
+    }
+
+    {
+        let number3 = "10";
+        let number4 = "23";
+
+        const result = number3 + number4;
+        console.log(result); // "1023" : we are getting a string now because we are doing a string concatenation in this case. Even if only one of them is a string, javascript will still concatenate the result
+    }

@@ -65,7 +65,7 @@ The scope of a let variable is block scope. It can be updated but cannot be re-d
 
 The scope of a const variable is block scope. It cannot be updated or re-declared into the scope. It cannot be declared without initialization. It cannot be accessed without initialization, as it cannot be declared without initialization.
 
-> When you console.log in chrome dev tools console, if the result is black, it is a string, if the result is blue, it is a number. You can also check the type of your variable by using `typeof`
+> When you console.log in chrome dev tools console, if the result is black, it is a string, if the result is blue, it is a number. You can also check the type of your variable by using `typeof`. We can do `typeof variable` or `typeof value`.
 
 ### Direct Assignment and Assignment by reference
 

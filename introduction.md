@@ -82,9 +82,12 @@ When you assign a primitive value a variable, any changes you make are made dire
 
 #### Assignment by Reference
 
-const c = { value: 1 };
-let d = c; // c.value = 1, d.value = 1
-d.value = 2; // c.value = 2, d.value = 2
+    {
+        const c = { value: 1 };
+
+        let d = c; // c.value = 1, d.value = 1
+        d.value = 2; // c.value = 2, d.value = 2
+    }
 
 ### Methods, Properties, Parameters, Arguments
 

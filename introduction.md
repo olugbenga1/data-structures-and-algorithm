@@ -1,4 +1,4 @@
-## Javascript Introduction
+# Javascript Introduction
 
 Javascript is a high level scripting language that can be interpreted and compiled at run time.
 
@@ -55,21 +55,21 @@ Using const and let in declating variables means they are block scoped, meaning 
 
 A variable is referred to as global when it is declared outside a block. When a variable is declared within a block, it is called a local variable/ local scope.
 
-### What is the difference between let and const?
+## What is the difference between let and const?
 
-#### let
+### let
 
 The scope of a let variable is block scope. It can be updated but cannot be re-declared into the scope. It can be declared without initialization. It cannot be accessed without initialization, as it returns an error.
 
-#### const
+### const
 
 The scope of a const variable is block scope. It cannot be updated or re-declared into the scope. It cannot be declared without initialization. It cannot be accessed without initialization, as it cannot be declared without initialization.
 
 > When you console.log in chrome dev tools console, if the result is black, it is a string, if the result is blue, it is a number. You can also check the type of your variable by using `typeof`. We can do `typeof variable` or `typeof value`.
 
-### Direct Assignment and Assignment by reference
+## Direct Assignment and Assignment by reference
 
-#### Direct Assignment
+### Direct Assignment
 
 When you assign a primitive value a variable, any changes you make are made directly to that value.
 
@@ -80,7 +80,7 @@ When you assign a primitive value a variable, any changes you make are made dire
         b = 2; // a = 1, b = 2
     }
 
-#### Assignment by Reference
+### Assignment by Reference
 
     {
         const c = { value: 1 };
@@ -89,7 +89,7 @@ When you assign a primitive value a variable, any changes you make are made dire
         d.value = 2; // c.value = 2, d.value = 2
     }
 
-### Methods, Properties, Parameters, Arguments
+## Methods, Properties, Parameters, Arguments
 
 `Properties` are information about the object or value, while
 
@@ -124,7 +124,7 @@ You can convert strings to numbers and numbers back to strings by using the `Num
 
 Numbers like strings also have methods in javascript
 
-#### String Concatenation
+### String Concatenation
 
 It is used to combine string values using quotation marks(""). Template literals also do similar operations using backticks.
 
@@ -141,7 +141,7 @@ It is used to combine string values using quotation marks(""). Template literals
         console.log(url);
     }
 
-#### Template Literals
+### Template Literals
 
 A special type of string that was introduced in ES6. It uses the backtick character to delineate strings. They also allow interpolation in javascript code. This means a javascript code can be inside a string and the result will be displayed. It can be used in place of string concatenation too.
 
@@ -152,13 +152,13 @@ A special type of string that was introduced in ES6. It uses the backtick charac
         let c = `the answer is ${a} + ${b}` // this outputs string "the answer is mario cart"
     }
 
-#### Arithmetic Operations
+### Arithmetic Operations
 
 Javascript can do arithmetic operations
 
 > Addition (+), Subtraction (-), Multiplication (\*), Division (/), Exponentiation, Modulus (%)
 
-#### Difference between points++ and ++points
+### Difference between points++ and ++points
 
     {
         let points = 5;
@@ -168,7 +168,7 @@ Javascript can do arithmetic operations
         ++points; // will increase points to 8, then return 8
     }
 
-### Type Coercion
+## Type Coercion
 
 Type coercion happens when the operands of an operator are of different types, Javascript then attempts to convert one operand to an equivalent value of the other operand's type. For example, if you try to multiply a string and a number, javascript will attempt to coerce the string to a number.
 
@@ -188,7 +188,7 @@ Type coercion happens when the operands of an operator are of different types, J
 
     > Typescript is an open source superset of javascript that is maintained by microsoft. It provides the option to specify types of variables when they are declared.
 
-### Implicit Type Conversion
+## Implicit Type Conversion
 
     {
         const name = "john";

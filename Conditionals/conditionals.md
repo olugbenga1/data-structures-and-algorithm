@@ -132,3 +132,5 @@ const dice = 1;
                 console.log("you did not roll the dice");
         }
     }
+
+> When you have multiple if else statements, it is best practice to use switch statements.

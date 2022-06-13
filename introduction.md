@@ -141,17 +141,6 @@ It is used to combine string values using quotation marks(""). Template literals
         console.log(url);
     }
 
-### Template Literals
-
-A special type of string that was introduced in ES6. It uses the backtick character to delineate strings. They also allow interpolation in javascript code. This means a javascript code can be inside a string and the result will be displayed. It can be used in place of string concatenation too.
-
-    {
-        let a = "mario";
-        let b = "cart";
-
-        let c = `the answer is ${a} + ${b}` // this outputs string "the answer is mario cart"
-    }
-
 ### Arithmetic Operations
 
 Javascript can do arithmetic operations

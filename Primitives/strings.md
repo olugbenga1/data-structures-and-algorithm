@@ -30,7 +30,7 @@ Some more examples of string methods
         console.log(text.slice(0, 2)) // creates a new string from the existing one by creating a new part of the string
     }
 
-### Template Literals
+### Template Literals - ES6+
 
 A special type of string that was introduced in ES6. It uses the backtick character to delineate strings. They also allow interpolation in javascript code. This means a javascript code can be inside a string and the result will be displayed. It can be used in place of string concatenation too.
 

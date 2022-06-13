@@ -1,4 +1,4 @@
-## Arrays
+# Arrays
 
 Arrays offer us an easy way to store list of items in javascript. We can also access them and perform various operations on them with great ease.
 
@@ -10,4 +10,82 @@ Arrays are stored in [] and are 0 index based.
         console.log(friends[1]); // "peter"
 
         friends[3] = "anna"; // changes the value 53 to "anna"
+    }
+
+## Array Properties and Methods
+
+    {
+        let names = ["john", "toby", "anna", "barry", "bobo"]
+    }
+
+### length
+
+    {
+        console.log(names.length); // outputs 5
+        console.log(names[names.length - 1]); // outputs "bobo" the last name in the array
+    }
+
+### concat
+
+    {
+        const lastNames = ["pepper", "onion", "banana"];
+        const allNames = names.concat(lastNames);
+        console.log(allNames); // returns a new concatenated array
+    }
+
+### reverse
+
+    {
+        console.log(allNames.reverse()); // returns the reverse of the concatenated array
+    }
+
+## Alter items from the beginning of an array
+
+### unshift
+
+> Adds to the beginning of the array
+
+    {
+        allNames.unshift("susy");
+        console.log(allNames); // adds susy to the beginning of the array
+    }
+
+### shift
+
+> Removes items from the beginning of the array. In this case you don't need to pass any parameter.
+
+    {
+        allNames.shift();
+    }
+
+## Alter items at the end of an array
+
+### push
+
+> Adds items to the end of an array
+
+    {
+        allNames.push("susy");
+        console.log(allNames);
+    }
+
+### pop
+
+> Removes items from the end of an array. You do not need to pass an argument in this case
+
+    {
+        allNames.pop();
+        console.log(allNames);
+    }
+
+---
+
+### Splice
+
+> We can grab specific items out of the array. It mutates the original array.
+
+    {
+        const specificNames = allNames(2, 1); // the arguments mean starting index is 2, and we are going to get 1 item out of it.
+        console.log(specicNames); // returns item in index 2
+        console.log(allNames); // returns allNames array without index 2 item.
     }

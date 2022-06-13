@@ -49,6 +49,11 @@ function calculateTotal(arr) {
   for (let i = 0; i < arr.length; i++) {
     total += arr[i];
   }
+  if (total > 100) {
+    console.log("whoa, you are spending too much");
+    return total;
+  }
+  console.log("You are good, total is less than 100");
   return total;
 }
 

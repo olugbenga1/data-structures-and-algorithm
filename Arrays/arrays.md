@@ -89,3 +89,28 @@ Arrays are stored in [] and are 0 index based.
         console.log(specicNames); // returns item in index 2
         console.log(allNames); // returns allNames array without index 2 item.
     }
+
+---
+
+## Arrays and For loop
+
+    {
+        const names = ["anna", ""susy, "bob"];
+        const lastName = "baker";
+    }
+
+Let us create a new array with each name combined with the last name
+
+    {
+        let newArray = [];
+    }
+
+    {
+        //for loop
+        for(let i = 0; i < names.length; i++) {
+            console.log(i);
+            console.log(names[i]);
+            const fullName = `${names[i]} ${lastName}`;
+            newArray.push(fullName);
+        }
+    }

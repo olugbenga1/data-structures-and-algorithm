@@ -226,3 +226,5 @@ Type coercion happens when the operands of an operator are of different types, J
         const result = number3 + number4;
         console.log(result); // "1023" : we are getting a string now because we are doing a string concatenation in this case. Even if only one of them is a string, javascript will still concatenate the result
     }
+
+## Truthy and Falsy

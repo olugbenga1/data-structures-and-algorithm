@@ -82,11 +82,35 @@ When you assign a primitive value a variable, any changes you make are made dire
 
 ### Assignment by Reference
 
+When assigning non-primitive data type value to a variable, it is done by reference so any changes made will affect all references.
+
     {
         const c = { value: 1 };
 
         let d = c; // c.value = 1, d.value = 1
         d.value = 2; // c.value = 2, d.value = 2
+    }
+
+    {
+        let person = {name: "bob"};
+        let person2 = person;
+
+        person2.name = "susy";
+
+        console.log(`the name of the first person is ${person.name}`); // person.name here will be "susy"
+        console.log(`the name of the second person is ${person2.name}`); // person2.name here too will be "susy" because of the assigning non-primitive data type is done by reference
+    }
+
+ES6 gives us a solution to this by using spread operator which we will cover fully in the ES6 folder. But let us see an example
+
+    {
+        let person = {name: "bob"};
+        let person2 = {...person};
+
+        person2.name = "susy";
+
+        console.log(`the name of the first person is ${person.name}`); // person.name here will be "bob".
+        console.log(`the name of the second person is ${person2.name}`); // person2.name will be "susy"
     }
 
 ## Methods, Properties, Parameters, Arguments

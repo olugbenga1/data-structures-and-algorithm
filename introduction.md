@@ -228,3 +228,17 @@ Type coercion happens when the operands of an operator are of different types, J
     }
 
 ## Truthy and Falsy
+
+In javascript, all the values are either truthy or falsy. This means even if the value is not a boolean itself, in a condition it can evaluate to either true or false. It is easier to just know the falsy values because there is less of them and know that every other thing is truthy.
+
+Falsy values include:
+
+- ""
+- ''
+- ``
+- 0
+- -0
+- NaN
+- false
+- null
+- undefined

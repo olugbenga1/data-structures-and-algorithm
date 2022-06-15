@@ -368,3 +368,19 @@ The output of the code block above will be as follows:
     }
 
 The value of name does not change in this instance because the declaration of variable name in the calculate() function and in the if block is local. In the global scope example, recall that the variable name was reassigned in the function blocks i.e. `name = "pants"` and not `let name = "pants"`. This is what makes the difference between declaring and reassigning variables.
+
+## Variable Lookup
+
+If there are two identically named variables, one in the local scope and another in the function scope. Javascript accesses the one in the local scope first and if it is not available, it accesses the one in the global scope.
+
+    {
+        const globalNumber = 5;
+
+        function add(num1, num2) {
+            const globalNumber = 20;
+            const result = num1 + num2 + globalNumber;
+            return result;
+        }
+
+        console.log(add(3, 4)); // returns 540 because javascript ignores the globalNumber variable declared in the global scope and uses the globalNumber declared in the local scope. If that number wasn't there, then javascript will fall back to the global scope
+    }

@@ -250,3 +250,21 @@ We have seen unary operator `typeof`, we have seen binary operator `assignment o
 Let us see tenary operator which gives us an option to shorten our logic.
 
 the syntax is `condition ? (runs if true) : (runs if false)`
+
+    {
+        const value = 1 < 0;
+
+        if (value) {
+            console.log("value is true");
+        } else {
+            console.log("value is false");
+        }
+    }
+
+Let us rewrite this logic using tenary operators
+
+    {
+        const value = 1 < 0;
+
+        value ? console.log("value is true") : console.log("value is false");
+    }

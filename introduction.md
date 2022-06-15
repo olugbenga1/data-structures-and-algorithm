@@ -242,3 +242,11 @@ Falsy values include:
 - false
 - null
 - undefined
+
+## Tenary Operators
+
+We have seen unary operator `typeof`, we have seen binary operator `assignment operator` `let number = 3;`.
+
+Let us see tenary operator which gives us an option to shorten our logic.
+
+the syntax is `condition ? (runs if true) : (runs if false)`

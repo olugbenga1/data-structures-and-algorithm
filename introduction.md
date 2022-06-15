@@ -270,3 +270,36 @@ Let us rewrite this logic using tenary operators
     }
 
 In a nut shell, instead of writing if and else statements sometimes, it makes sense to use tenary operators.
+
+## Global Scope vs Local Scope
+
+Any variable outside of a code block is said to be in the global scope. That means we can access it and modify it from anywhere in the program. We need to be aware and not modify the values by mistake.
+
+Let us consider this code block below:
+
+    {
+        let name = "bobo";
+        name = "peter";
+
+        function calculate() {
+            console.log(name);
+            name = "orange";
+        }
+
+        calculate();
+
+        console.log(`my  name is ${name} and i'm awesome`);
+    }
+
+The output of the code block above will be as follows:
+
+    {
+        // peter
+        // my name is orange and i'm awesome
+    }
+
+Explanation is, the first console.log in the function calculate() logs "peter" because variable name has already been reassigned from "bobo" to "peter" in the global scope.
+
+The next console.log() will return `my name is "orange" and I'm awesome`.
+
+This is because name was reassigned to "orange" in the calculate() function.

@@ -268,3 +268,5 @@ Let us rewrite this logic using tenary operators
 
         value ? console.log("value is true") : console.log("value is false");
     }
+
+In a nut shell, instead of writing if and else statements sometimes, it makes sense to use tenary operators.

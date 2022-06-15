@@ -273,6 +273,8 @@ In a nut shell, instead of writing if and else statements sometimes, it makes se
 
 ## Global Scope vs Local Scope
 
+### Global Scope
+
 Any variable outside of a code block is said to be in the global scope. That means we can access it and modify it from anywhere in the program. We need to be aware and not modify the values by mistake.
 
 Let us consider this code block below:
@@ -303,3 +305,64 @@ Explanation is, the first console.log in the function calculate() logs "peter" b
 The next console.log() will return `my name is "orange" and I'm awesome`.
 
 This is because name was reassigned to "orange" in the calculate() function.
+
+Let us take a look at a second example, more like an extension of the first example above:
+
+    {
+        let name = "bobo";
+        name = "peter";
+
+        function calculate() {
+            console.log(name);
+            name = "orange";
+        }
+        calculate();
+
+        if(true) {
+            console.log(name);
+            name = "pants";
+        }
+
+        console.log(`my name is ${name} and I'm awesome`);
+    }
+
+The output of the code block above will be as follows:
+
+    {
+        // peter
+        // orange
+        // my name is pants and I'm awesome
+    }
+
+Explanation - For the same reasons as the first example and to further add that variable name was reassigned to "orange" in the calculate() function block and name was reassigned to "pants" in the if statement block.
+
+> It is very important to be careful when working with global variable or best avoid global variables if you can. This is because global variables can cause name collisions, or can get modified by mistake.
+
+### Local Scope
+
+If we set up a function within a function, it is only going to be available within that function/ code blocks. You can not access the variable outside that function.
+
+By code blocks, we mean `{ }` or `if statements`. When we talk about the curly braces or if statements, we are not talking about the `var`. We are only referring to `const` and `let`.
+
+Let us look at the following example:
+
+    {
+        let name = "bobo";
+
+        function calculate() {
+            const name = "john";
+        }
+        calculate();
+
+        if (true) {
+            const name = "john";
+        }
+
+        console.log(`my name is ${name} and I'm awesome`);
+    }
+
+The output of the code block above will be as follows:
+
+    {
+        // my name is bobo and I'm awesome
+    }

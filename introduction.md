@@ -366,3 +366,5 @@ The output of the code block above will be as follows:
     {
         // my name is bobo and I'm awesome
     }
+
+The value of name does not change in this instance because the declaration of variable name in the calculate() function and in the if block is local. In the global scope example, recall that the variable name was reassigned in the function blocks i.e. `name = "pants"` and not `let name = "pants"`. This is what makes the difference between declaring and reassigning variables.

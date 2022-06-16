@@ -194,3 +194,11 @@ filter method does return a new array. This method can also manipulate the size 
 
         console.log(youngPeople);
     }
+
+### find()
+
+find returns a single instance (in the case of our example, an object). It is going to return a first match. If there are no matches, it returns undefined. It is great for getting unique values.
+
+```
+  const people = [{name: "bob", age: 20, position: "developer", id: 1}, {name: "peter", age: 25, position: "designer"}, {name: "susy", age: 30, position: "the boss"}];
+```

@@ -118,3 +118,32 @@ Let us create a new array with each name combined with the last name
 ## More Array Methods
 
 Now that we have some fundamental understanding of higher order functions and callback function(check functions.md for reference), we will put them to use when implementing 4 of these array methods forEach, map, filter, find, reduce. These methods help us iterate over arrays in javascript with no for loop required. They basically accept callback function as an argument, call callback against each item of an array and reference item in callback parameter.
+
+### forEach
+
+One thing to note about this method is that it does not return a new array. Some other array methods do, but forEach does not.
+forEach iterates through every element in an array.
+
+There are two methods for passing the callback function in an array method.
+
+- First Method
+
+  {
+  const people = [{name: "bob", age: 20, position: "developer"}, {name: "peter", age: 25, position: "designer"}, {name: "susy", age: 30, position: "the boss"}];
+
+        function showPerson(person) {
+            console.log(person.position); // Will return the position of each of the persons. i.e. developer, designer, the boss
+        }
+
+        people.forEach(showPerson)
+
+  }
+
+- Second Method
+  {
+  people.forEach(function(item) {
+  console.log(item.position.toUpperCase);
+  });
+  }
+
+  > Note that you do not invoke the function

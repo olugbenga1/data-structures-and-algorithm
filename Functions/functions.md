@@ -1,16 +1,17 @@
-### Functions
+# Functions
 
 Functions allow us to write all our code in one place and later reuse them throughout our application. Functions reduce redundancy.
 
-    {
-        function hello() {
-            console.log("Hello it is Olugbenga");
-        } // function declaration
+{
+function hello() {
+console.log("Hello it is Olugbenga");
+} // function declaration
 
         hello(); // function invocation
-    }
 
-#### Function arguments and parameters
+}
+
+## Function arguments and parameters
 
     {
         function greet(name) {
@@ -20,7 +21,7 @@ Functions allow us to write all our code in one place and later reuse them throu
         greet("Tobi"); // passed in parameter "Tobi"
     }
 
-#### Functions return
+### Functions return
 
 You can evaluate a function with a return statement. Whatever you write after return will be null
 
@@ -58,4 +59,29 @@ Aside the way we discussed above for setting up a function, we can also use func
         } // In function expressions, you can choose to add the name "addValues" when declaring your function or not.
 
         const thirdValue = add(5, 6)
+    }
+
+## Callback Functions, Higher Order Functions
+
+Functions are first class objects. They can be stored in a variable (expression), passed as an argument to another function, return from the function (closure).
+
+We have these kinds of functions:
+
+- Callback Functions: Passed to another function as an argument and executed inside that function as a result. This callback function is typically passed into a higher order function.
+
+- Higher Order Functions: This is when a function accepts another function as an argument or returns another function as a result. This function typically receives a callback function.
+
+### Callback Functions
+
+    {
+        function morning(name) {
+            return `Good morning ${name.toUpperCase()}`;
+        }
+
+        function greet(name, cb) {
+            const myName = "john";
+            console.log(`${cb(name)}, my name is ${myName}`);
+        }
+
+        greet("bob", )
     }

@@ -154,4 +154,27 @@ There are two methods for passing the callback function in an array method.
 
 ### map
 
-map unlike forEach() returns a new array. map does not chamge size of the original array. map uses values from original array when making a new one.
+map unlike forEach() returns a new array. map does not chamge size of the original array. map uses values from original array when making a new one. We will be setting our function to a variable because we know map will return a new array.
+
+```
+  const people = [{name: "bob", age: 20, position: "developer"}, {name: "peter", age: 25, position: "designer"}, {name: "susy", age: 30, position: "the boss"}];
+```
+
+    {
+        const ages = people.map(function(person) {
+            return person.age;
+        })
+
+        console.log(ages); // return an array [20, 25, 30]
+    }
+
+In this next example, we are going to return a new array of objects with the names in uppercase and the ages + 20:
+
+    {
+        const newPeople = people.map(function(person) {
+            return {
+                firstname: person.name.toUpperCase(),
+                age: person.age + 20
+            }
+        })
+    }

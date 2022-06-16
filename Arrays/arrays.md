@@ -129,7 +129,10 @@ There are two methods for passing the callback function in an array method.
 - First Method
 
   {
+
+```
   const people = [{name: "bob", age: 20, position: "developer"}, {name: "peter", age: 25, position: "designer"}, {name: "susy", age: 30, position: "the boss"}];
+```
 
         function showPerson(person) {
             console.log(person.position); // Will return the position of each of the persons. i.e. developer, designer, the boss
@@ -137,7 +140,7 @@ There are two methods for passing the callback function in an array method.
 
         people.forEach(showPerson)
 
-  }
+}
 
 - Second Method
 

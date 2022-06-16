@@ -73,6 +73,8 @@ We have these kinds of functions:
 
 ### Callback Functions
 
+This allows us to pass in functions as argument into another function, making us write more complex logic.
+
     {
         function morning(name) {
             return `Good morning ${name.toUpperCase()}`;
@@ -83,5 +85,5 @@ We have these kinds of functions:
             console.log(`${cb(name)}, my name is ${myName}`);
         }
 
-        greet("bob", )
+        greet("bob", morning)
     }

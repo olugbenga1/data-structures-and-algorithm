@@ -140,10 +140,15 @@ There are two methods for passing the callback function in an array method.
   }
 
 - Second Method
-  {
+
+  ```
   people.forEach(function(item) {
   console.log(item.position.toUpperCase);
   });
-  }
+  ```
 
   > Note that you do not invoke the function
+
+### map
+
+map unlike forEach() returns a new array. map does not chamge size of the original array. map uses values from original array when making a new one.

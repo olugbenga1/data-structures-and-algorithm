@@ -119,7 +119,7 @@ Let us create a new array with each name combined with the last name
 
 Now that we have some fundamental understanding of higher order functions and callback function(check functions.md for reference), we will put them to use when implementing 4 of these array methods forEach, map, filter, find, reduce. These methods help us iterate over arrays in javascript with no for loop required. They basically accept callback function as an argument, call callback against each item of an array and reference item in callback parameter.
 
-### forEach
+### forEach()
 
 One thing to note about this method is that it does not return a new array. Some other array methods do, but forEach does not.
 forEach iterates through every element in an array.
@@ -152,9 +152,9 @@ There are two methods for passing the callback function in an array method.
 
   > Note that you do not invoke the function
 
-### map
+### map()
 
-map unlike forEach() returns a new array. map does not chamge size of the original array. map uses values from original array when making a new one. We will be setting our function to a variable because we know map will return a new array.
+map unlike forEach() returns a new array. map does not change size of the original array. map uses values from original array when making a new one. We will be setting our function to a variable because we know map will return a new array.
 
 ```
   const people = [{name: "bob", age: 20, position: "developer"}, {name: "peter", age: 25, position: "designer"}, {name: "susy", age: 30, position: "the boss"}];
@@ -177,4 +177,20 @@ In this next example, we are going to return a new array of objects with the nam
                 age: person.age + 20
             }
         })
+    }
+
+### filter()
+
+filter method does return a new array. This method can also manipulate the size of the new array. Filter method returns based on condition.
+
+```
+  const people = [{name: "bob", age: 20, position: "developer"}, {name: "peter", age: 25, position: "designer"}, {name: "susy", age: 30, position: "the boss"}];
+```
+
+    {
+        const youngPeople = people.filter(function(person) {
+            return person.age <= 25;
+        })
+
+        console.log(youngPeople);
     }

@@ -199,6 +199,52 @@ filter method does return a new array. This method can also manipulate the size 
 
 find returns a single instance (in the case of our example, an object). It is going to return a first match. If there are no matches, it returns undefined. It is great for getting unique values.
 
+Let say you have these array of objects below:
+
 ```
   const people = [{name: "bob", age: 20, position: "developer", id: 1}, {name: "peter", age: 25, position: "designer"}, {name: "susy", age: 30, position: "the boss"}];
 ```
+
+```
+    const person = people.find(function (person) {
+        return person.id === 3;
+    });
+    console.log(person.name) // this will return "susy"
+```
+
+filter and find have similarities but here is the difference:
+
+    {
+        const person2 = people.filter(function (person) {
+            return person2.id === 3;
+        })
+
+        console.log(person2.name) // This will return an array of object containing "susy"
+
+        // However if you want to a return value of "susy", you can either use filter or output as shown below
+
+        console.log(person2[0].name)
+    }
+
+### reduce()
+
+It iterates over the array, It reduces the values in an array to one single value. You must return the total, you must also note the type of the return value.
+
+```
+  const people = [{name: "bob", age: 20, position: "developer", id: 1, salary: 200}, {name: "peter", age: 25, position: "designer", id: 2, salary: 300}, {name: "susy", age: 30, position: "the boss", id: 3, salary: 500}, {name: "anna", age: 35, position: "the boss", id: 4, salary: 500}];
+```
+
+    {
+        const total = people.reduce(function (acc, currItem) {
+            console.log(`total ${acc}`);
+            console.log(`current money: ${currItem.salary}`);
+
+            acc += currItem.salary;
+            return acc;
+        }, 0)
+        console.log(total)
+    }
+
+---
+
+In order to avoid being clumsy with our code, we can access data stored in a different file. To demonstrate this, we created data.js and arrays.js in the arrays folder. Then we reference the data.js and arrays.js in the html script element. Order matters here as the data.js script tag which will contain the data we'll be accessing from our arrays.js has to be placed above the arrays.js script tag. There are other ways this can be achieved (ES6 modules, fetch data from external DB)

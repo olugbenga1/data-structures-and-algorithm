@@ -20,3 +20,23 @@ Objects in javascript are a collection of properties. Or the properties are also
         person.greeting();
         person.name = "matt"; // changes the value "john" to "matt";
     }
+
+### Math
+
+Standard built-in objects always available in your program.
+
+```
+const number = 4.56789;
+const result = Math.floor(number);
+console.log(result);
+```
+
+Some other methods can be called on the Math object such as Math.sqrt(number), Math.floor(number), Math.ceil(number), Math.min(number, number ...), Math.random.
+
+### Date
+
+It is also a global object. It is always available in your javascript program.
+
+    {
+        const date = new Date();
+    }

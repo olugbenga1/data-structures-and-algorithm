@@ -39,4 +39,8 @@ It is also a global object. It is always available in your javascript program.
 
     {
         const date = new Date();
+        // To get months and days of the week, you need to have some reference like an array of months of the year, an array of days of the week because
+
+        const month = date.getMonth();
+        console.log(month); // This will return a number
     }

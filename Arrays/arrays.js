@@ -59,7 +59,7 @@ const subject = "math";
 const total = {};
 
 total[subject] = "some value";
-console.log(total); // Here the value of subject will change wrt changes in the value of variable subject.
+// console.log(total); // Here the value of subject will change wrt changes in the value of variable subject.
 
 const survey = students.reduce(function (survey, student) {
   //   console.log(student.favoriteSubject);
@@ -73,4 +73,6 @@ const survey = students.reduce(function (survey, student) {
   return survey;
 }, {});
 
-console.log(survey);
+// console.log(survey);
+
+console.dir(document);

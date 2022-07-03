@@ -289,3 +289,72 @@ classList seems like a bit better solution since class name won't overwrite on i
         const classValue = third.classList;
         console.log(classValue);
     }
+
+## createElement("element") vs createTextNode("text content") vs element.appendChild(childElement)
+
+Add Elements dynamically
+
+    {
+        <style>
+            .red {
+                background: red;
+                color: white;
+            }
+            .blue {
+                background: blue;
+                color: white
+            }
+        </style>
+    }
+
+    {
+        <body>
+            <div id="result">
+                <h1 class="red">I'm the child of result</h1>
+            </div>
+        </body>
+    }
+
+    {
+        const result = document.getElementById("#result");
+
+        // create empty element
+        const bodyDiv = document.createElement("div")
+
+        // create text node
+        const text = document.createTextNode("a simple body div");
+
+        bodyDiv.appendChild(text);
+        document.body.appenChild(bodyDiv);
+
+        // create new heading element and add to result div
+
+        const heading = document.createElement("h2");
+        const headingText = document.createTextNode("dynamic heading");
+
+        heading.appendChild(headingText);
+        document.body.appendChild(heading);
+    }
+
+### insertBefore("element", "location")
+
+    {
+        const result = document.getElementById("#result");
+
+        // create empty element
+        const bodyDiv = document.createElement("div")
+
+        // create text node
+        const text = document.createTextNode("a simple body div");
+
+        bodyDiv.appendChild(text);
+        document.body.insertBefore(bodyDiv, result);
+
+        // create new heading element and add to result div
+
+        const heading = document.createElement("h2");
+        const headingText = document.createTextNode("dynamic heading");
+
+        heading.appendChild(headingText);
+
+    }

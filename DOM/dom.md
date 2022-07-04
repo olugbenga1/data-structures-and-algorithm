@@ -342,7 +342,8 @@ Add Elements dynamically
         const result = document.getElementById("#result");
 
         // create empty element
-        const bodyDiv = document.createElement("div")
+        const bodyDiv = document.createElement("div");
+        const first = document.querySelector(".red");
 
         // create text node
         const text = document.createTextNode("a simple body div");
@@ -354,7 +355,18 @@ Add Elements dynamically
 
         const heading = document.createElement("h2");
         const headingText = document.createTextNode("dynamic heading");
-
         heading.appendChild(headingText);
+        heading.classList.add("blue");
+    }
 
+### replaceChild("new", "old")
+
+We will be creating a brand new element to show this and also referencing the code above like `bodyDiv`.
+
+    {
+        const smallHeading = document.createElement("h6");
+        const smallText = document.createTextNode("I'm a small heading");
+        smallHeading.classList.add("red");
+        smallHeading.appendChild(smallText);
+        document.body.replaceChild(smallHeading, bodyDiv);
     }

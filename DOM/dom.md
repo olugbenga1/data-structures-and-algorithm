@@ -370,3 +370,38 @@ We will be creating a brand new element to show this and also referencing the co
         smallHeading.appendChild(smallText);
         document.body.replaceChild(smallHeading, bodyDiv);
     }
+
+### prepend, innerText
+
+    {
+        const heading = document.createElement("h2");
+        heading.innerText = `I am a dynamic element`;
+
+        // prepend adds element at the beginning of the element while append adds at the end of the element.
+
+        document.body.prepend(heading);
+    }
+
+## Remove elements from the DOM,
+
+### remove, removeChild
+
+    {
+        <body>
+            <h1>hello world</h1>
+            <div id="result">
+                <h1>second heading</h1>
+            </div>
+        </body>
+    }
+
+    {
+        const result = document.querySelector("#result");
+        // result.remove();
+
+        // We can also remove the content (child) of a parent element using the removeChild() method
+
+        const heading = result.querySelector("h1");
+        result.removeChild(heading);
+        console.log(heading); // <h1>second heading</h1> is removed
+    }

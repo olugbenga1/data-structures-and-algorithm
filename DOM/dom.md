@@ -565,3 +565,29 @@ mouseleave - moved out of an element
     }
 
 For more control with click events, we can use `mousedown` and `mouseup` as opposed to `click`
+
+## Key Events
+
+keypress - when key is pressed
+keydown - when key is down
+keyup - when key is released
+
+We will look at key events. We will do that with an input element in our HTML file.
+
+    {
+        <body>
+            <input type="text" id="name" />
+        </body>
+    }
+
+    {
+        const nameInput = document.getElementById("name");
+
+        nameInput.addEventListener("keypress", function() {
+            console.log("you pressed a key");
+        });
+
+        nameInput.addEventListener("keyup", function() {
+            console.dir(nameInput); // This shows all properties of name input
+        })
+    }

@@ -438,3 +438,34 @@ We will be creating a brand new element to show this and also referencing the co
     }
 
 ## Change CSS with style property
+
+    {
+        <style>
+            .title {
+            background: blue;
+            color: white;
+            font-size: 3rem;
+            text-transform: capitalize;
+            }
+        </style>
+    }
+
+    {
+        <body>
+            <div class="random">I'm just some random div looking for the css</div>
+        </body>
+    }
+
+    {
+        const random = document.querySelector(".random");
+        random.style.backgroundColor = "blue";
+        random.style.color = "white";
+        random.style.fontSize = "3rem";
+        random.style.textTransform = "capitalize";
+
+        // Instead of adding the style properties like this, below is another way this can be done
+
+        random.classList.add("title"); // This will work since we have already defined out title class in our css
+    }
+
+## Click Event

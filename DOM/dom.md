@@ -469,3 +469,52 @@ We will be creating a brand new element to show this and also referencing the co
     }
 
 ## Click Event
+
+There are other events in javascript but we are going to be dealing with more of that in the dom.js exercises.
+
+    {
+        .red {
+            background: red;
+            color: white;
+            text-transform: uppercase;
+            font-size: 2rem;
+        }
+
+        .blue {
+            background: blue;
+            color: white;
+            text-transform: capitalize;
+            letter-spacing: 10px;
+        }
+
+        .btn {
+            background: #f15025;
+            color: white;
+            font-size: 1.2rem;
+            border: none;
+        }
+    }
+
+    {
+        <body>
+            <h2>events in javascript</h2>
+            <button class="btn">click me</button>
+            <!-- javascript -->
+            <p onclick="this.classList.add('red')">the old style</p>
+        </body>
+    }
+
+The three core principles about events are as follows;
+
+1. Select element
+2. addEventListener()
+3. what event, what to do
+
+   ```
+       const btn = document.querySelector(".btn");
+       const heading = document.querySelector("h2");
+
+       btn.addEventLIstener("click", function() {
+       heading.classList.add("red");
+       });
+   ```

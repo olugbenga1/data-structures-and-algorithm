@@ -405,3 +405,36 @@ We will be creating a brand new element to show this and also referencing the co
         result.removeChild(heading);
         console.log(heading); // <h1>second heading</h1> is removed
     }
+
+---
+
+### innerHTML, textContent
+
+    {
+        <body>
+            <ul id="first">
+                <li class="item">list item</li>
+                <li>list item</li>
+            </ul>
+            <div id="second">
+                I have some text content
+            </div>
+        </body>
+    }
+
+    {
+        const list = document.getElementById("first");
+        const div = document.getElementById("second");
+        const item = document.querySelector(".item");
+
+        console.log(div.textContent);
+        console.log(list.innerHTML);
+        console.log(list.textContent);
+
+        const randomVar = "random value";
+
+        const ul = document.createElement("ul");
+        ul.innerHTML = `<li class="item">${randomVar}</li> <li>list item</li> <li>list item</li>`
+    }
+
+## Change CSS with style property

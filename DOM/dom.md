@@ -518,3 +518,50 @@ The three core principles about events are as follows;
        heading.classList.add("red");
        });
    ```
+
+Let's implement a logic whereby whenever we click on a button, we are going to be checking whether that particular class is present. If that class is present, then we are going to be removing that class, if the class is not there, we are going to add it.
+
+    {
+        function changeColors() {
+            let hasClass = heading.classList.contains("red");
+            if(hasClass) {
+                heading.classList.remove("red");
+            } else {
+                heading.classList.add("red");
+            }
+        }
+
+        btn.addEventListener("click", changeColors);
+    }
+
+## Mouse Events
+
+click - fires after full action occurs
+mousedown - button is pressed
+mouseup - button is released
+mouseenter - moved onto an element
+mouseleave - moved out of an element
+
+    {
+        <body>
+            <h1>events in javascript</h1>
+            <button class="btn">click me</button>
+        </body>
+    }
+
+    {
+        const heading = document.querySelector("h1");
+        const btn = document.querySelector(".btn");
+
+        btn.addEventListener("click"), function() {
+            console.log("you clicked me") // this runs last
+        }
+        btn.addEventListener("mousedown"), function() {
+            console.log("down") // this runs first
+        }
+        btn.addEventListener("mouseup"), function() {
+            console.log("up") // this runs second
+        }
+    }
+
+For more control with click events, we can use `mousedown` and `mouseup` as opposed to `click`

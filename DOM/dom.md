@@ -591,3 +591,31 @@ We will look at key events. We will do that with an input element in our HTML fi
             console.dir(nameInput); // This shows all properties of name input
         })
     }
+
+## Event Object
+
+event object argument e, evt
+event.type
+event.currentTarget
+this keyword
+preventDefault() - prevents default browser behavior
+
+    {
+        const heading = document.querySelector("h1");
+        const btn = document.querySelector(".btn");
+        const link = document.getElementById("link");
+
+        heading.addEventListener("click", function(e) {
+            console.log(e.currentTarget);
+            console.log(this); // this will also return the heading in the console however this will not work if you are using arrow function for your call back function.
+        })
+
+
+        btn.addEventListener("click", function(event) {
+            event.currentTarget.classList.add("blue");
+        })
+
+        function someFunc(e) {
+            e.preventDefault();
+        }
+    }

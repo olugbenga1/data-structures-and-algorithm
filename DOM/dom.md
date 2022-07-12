@@ -625,3 +625,36 @@ preventDefault() - prevents default browser behavior
 currentTarget always refers to the element to which the event handler has been attached to
 
 target identifies the element on which the event occured
+
+## Event Propagation - Bubbling - Capturing
+
+It allows us to select dynamic elements
+
+event propagation -
+
+event bubbling - clicked element first the bubbles up -- default
+
+event capturing - fires at the root and fires until reaches target
+
+    {
+        <div class="container">
+            <ul class="list-items">
+                <li class="item"><a href="#" class="link">link</a></li>
+                <li class="item"><a href="#" class="link">link</a></li>
+                <li class="item"><a href="#" class="link">link</a></li>
+            </ul>
+        </div>
+    }
+
+    {
+        const container = document.querySelector(".container");
+        const list = document.querySelector(".list-items");
+
+        function showBubbling(e) {
+            console.log("current target", e.currentTarget);
+            console.log("target", e.target);
+        }
+
+        list.addEventListener("click", showBubbling);
+        container.addEventListener("click", showBubbling);
+    }

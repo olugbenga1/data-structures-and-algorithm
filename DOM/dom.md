@@ -657,4 +657,7 @@ event capturing - fires at the root and fires until reaches target
 
         list.addEventListener("click", showBubbling);
         container.addEventListener("click", showBubbling);
+        container.addEventListener("click", showBubbling);
+        document.addEventListener("click", showBubbling);
+        window.addEvemtListener("click", showBubbling);
     }

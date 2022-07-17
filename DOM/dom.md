@@ -657,7 +657,33 @@ event capturing - fires at the root and fires until reaches target
 
         list.addEventListener("click", showBubbling);
         container.addEventListener("click", showBubbling);
-        container.addEventListener("click", showBubbling);
         document.addEventListener("click", showBubbling);
         window.addEvemtListener("click", showBubbling);
+    }
+
+## Event Propagation
+
+## Forms
+
+Submit event listener
+prevent default behavior of forms
+how to get a value from the input
+
+    {
+        <form>
+
+        </form>
+    }
+
+    {
+        const form = document.getElementById("form");
+        const name = document.getElementById("name");
+        const password = document.getElementById("password");
+
+        form.addEventListener("submit", function(e) {
+            e.preventStorage();
+            console.log("form submitted");
+            console.log(name.value);
+            console.log(password.value)
+        })
     }

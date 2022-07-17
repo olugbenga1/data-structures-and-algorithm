@@ -671,7 +671,9 @@ how to get a value from the input
 
     {
         <form>
-
+            <input type="name" for="name">
+            <input type="password" for="password">
+            <input type="submit" for="submit">
         </form>
     }
 
@@ -686,4 +688,26 @@ how to get a value from the input
             console.log(name.value);
             console.log(password.value)
         })
+    }
+
+## Local Storage
+
+Web storage API - provided by browser
+session storage, local storage
+setItem, getItem, removeItem, clear
+
+local storage and session storage work the same way as far as methods is concerned
+
+    {
+        localStorage.setItem("name", "john");
+        localStorage.setItem("friend", "peter");
+        localStorage.setItem("job", "developer");
+        localStorage.setItem("address", "street 123");
+
+        const name = localStorage.getItem("name");
+        console.log(name);
+        localStorage.removeItem("name");
+        const anotherName = localStorage.getItem("name");
+        console.log(anotherName);
+        localStorage.clear();
     }

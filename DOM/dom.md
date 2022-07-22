@@ -729,3 +729,39 @@ JSON.stringify(), JSON.parse()
 When working with localStorage and the value is more complicated than a simple string, remember to store it using JSON.stringify() first, and access it with JSON.parse(). That way we can keep whatever data structure we have.
 
 Let us check if we have a value in the local storage already, if we do, assign value to a variable, else, assign variable to an empty array
+
+## setTimeout
+
+setTimeout - runs function once after specific time
+
+- pass function reference
+- duration in ms (1000 ms = 1 second)
+- default 0, will cover more extensively in async/await function
+- returns unique identifier
+- clearTimeout to cancel
+- on window object
+
+  ```
+      function sayHello() {
+      console.log("hello john");
+      }
+
+      // setTimeout (sayHello, 1000);
+
+      // will not work
+      // setTimeout (sayHello(), 1000); // Do not invoke the function
+
+      // alternative approach, ES6 arrow functions
+
+      // setTimeout(function () {
+        console.log("hello john");
+      }, 2000);
+
+      // pass arguments
+
+      function showScore(name, score) {
+        console.log(`hello ${name}, your score is ${score}`);
+
+        setTimeout(showScore, 1000, "john", 34);
+      }
+  ```

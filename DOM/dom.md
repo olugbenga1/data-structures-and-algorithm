@@ -725,3 +725,7 @@ JSON.stringify(), JSON.parse()
         const values = JSON.parse(localStorage.getItem("friends"));
         console.log(values[0]);
     }
+
+When working with localStorage and the value is more complicated than a simple string, remember to store it using JSON.stringify() first, and access it with JSON.parse(). That way we can keep whatever data structure we have.
+
+Let us check if we have a value in the local storage already, if we do, assign value to a variable, else, assign variable to an empty array

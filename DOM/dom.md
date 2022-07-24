@@ -732,7 +732,7 @@ Let us check if we have a value in the local storage already, if we do, assign v
 
 ## setTimeout
 
-setTimeout - runs function once after specific time
+setTimeout - runs function once after specific time. It is also available on the window object.
 
 - pass function reference
 - duration in ms (1000 ms = 1 second)
@@ -761,7 +761,16 @@ setTimeout - runs function once after specific time
 
       function showScore(name, score) {
         console.log(`hello ${name}, your score is ${score}`);
-
-        setTimeout(showScore, 1000, "john", 34);
       }
+
+      //setTimeout(showScore, 1000, "john", 34);
+
+        const firstID = setTimeout(showScore, 1000, "john", 34);
+        const secondID = setTimeout(showScore, 1000, "peter", 88);
+
+        console.log(firstID); // returns a unique identifier (1) then runs the function setTimeout
+
+        console.log(secondID); // returns a unique identifier (2) then runs the function setTimeout
+
+        clearTimeout(firstID); // stops firstID from running in the console.
   ```

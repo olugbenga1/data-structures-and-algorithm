@@ -797,7 +797,7 @@ example
         setInterval(showScore, 1000, "bobo", 45); // every second we'll have this in the console
     }
 
-## DOMContentLoaded
+## DOMContentLoaded Event
 
 The DOMContentLoaded event fires when the initial HTML document has been completely loaded and parsed, without waiting for the stylesheets, images, and subframes to finish loading.
 
@@ -817,7 +817,7 @@ syntax
         })
     }
 
-## load
+## Load Event
 
 The load event is fired when the whole page has loaded, including all dependent resources such as stylesheets and images. This is in contrast to DOMContentLoaded, which is fired as soon as the page DOM has been loaded, without waiting for resources to finish loading.
 
@@ -885,4 +885,14 @@ The Element.getBoundingClientRect() method returns a DOMRect object providing in
             const values = box.getBoundingClientRect();
             console.log(values);
         });
+    }
+
+## Resize Event
+
+The resize event fires when the document view (window) has been resized.
+
+    {
+        window.addEventListener("resize", function() {
+            console.log(window.innerWidth);
+        })
     }

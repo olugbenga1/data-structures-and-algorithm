@@ -838,3 +838,27 @@ syntax
     }
 
 DOMContentLoaded event will load before the load event
+
+## Scroll Event
+
+We can listen to this event on the element or on the document. We can only trigger this event if we can scroll our page.
+
+syntax
+
+```
+    window.addEventListener("scroll", function() {
+        console.log(window.scrollY + "px");
+        console.log(window.scrollX + "px");
+    });
+```
+
+scrollY - returns the number of pixels the document is currently scrolled along the vertical axis (pageYOffset)
+
+scrollX - returns the number of pixels scrolled along the horizontal axis (pageXOffset)
+
+    {
+        window.addEventListener("scroll", function() {
+            console.log(window.scrollY + "px");
+            console.log(window.scrollX + "px");
+        });
+    }

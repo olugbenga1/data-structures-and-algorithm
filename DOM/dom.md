@@ -862,3 +862,27 @@ scrollX - returns the number of pixels scrolled along the horizontal axis (pageX
             console.log(window.scrollX + "px");
         });
     }
+
+## Width, Height, GetBoundingClientRect
+
+innerWidth - The read-only window property of the window interface returns the interior width of the window in pixels
+
+innerHeight - The read-only window property of the window interface returns the interior height of the window in pixels
+
+The Element.getBoundingClientRect() method returns a DOMRect object providing information about the size of an element and its position relative to the viewport.
+
+    {
+        These return the width and height of the window
+        console.log("height: " + window.innerHeight);
+        console.log("width: " + window.innerWidth);
+
+        /* create a button element and a red square in html, when we click the button, we want to get the object the GetBoundingClientRect() method returns. */
+
+        const btn = document.querySelector(".btn");
+        const box = document.querySelector(".box");
+
+        btn.addEventListener("click", function () {
+            const values = box.getBoundingClientRect();
+            console.log(values);
+        });
+    }

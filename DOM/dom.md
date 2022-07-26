@@ -774,3 +774,25 @@ setTimeout - runs function once after specific time. It is also available on the
 
         clearTimeout(firstID); // stops firstID from running in the console.
   ```
+
+## setInterval
+
+This runs functions repeatedly at specific intervals.
+
+- pass function reference
+- durarion in ms (1000 ms = 1 second)
+- default 0, will cover more extensively in async/await section
+- returns unique identifier
+- clearInterval to cancel
+
+example
+
+    {
+        function showScore(name, score) {
+            console.log(`hello ${name}, your score is ${score}`);
+        }
+
+        // setInterval(showScore, 2000)
+
+        setInterval(showScore, 1000, "bobo", 45); // every second we'll have this in the console
+    }

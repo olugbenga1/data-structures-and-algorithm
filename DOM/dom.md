@@ -796,3 +796,23 @@ example
 
         setInterval(showScore, 1000, "bobo", 45); // every second we'll have this in the console
     }
+
+## DOMContentLoaded
+
+The DOMContentLoaded event fires when the initial HTML document has been completely loaded and parsed, without waiting for the stylesheets, images, and subframes to finish loading.
+
+syntax
+
+```
+   window.addEventListener("DOMContentLoaded", function() {
+        // your code goes here
+   })
+```
+
+    {
+        window.addEventListener("DOMContentLoaded", function () {
+            const heading = document.querySelector("h1");
+            console.log(heading);
+            heading.style.color = "red";
+        })
+    }
